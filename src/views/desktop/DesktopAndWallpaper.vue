@@ -18,7 +18,7 @@ export default {
   name: "DesktopAndWallpaper",
   data() {
     return {
-      name: "桌面和壁纸",
+      name: this.$t(this.$store.state.language,"桌面和壁纸"),
     };
   },
   components: {

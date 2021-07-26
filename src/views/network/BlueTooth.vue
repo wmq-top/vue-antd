@@ -18,7 +18,7 @@ export default {
   name: "BlueTooth",
   data() {
     return {
-      name: "蓝牙",
+      name:this.$t(this.$store.state.language,"蓝牙"),
     };
   },
   components: {

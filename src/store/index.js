@@ -17,7 +17,8 @@ export default new Vuex.Store({
         password: 'guide123',
         remember: false
       }
-    ]
+    ],
+    language: 'English'
   },
   mutations: {
     increasstate: function(user) {

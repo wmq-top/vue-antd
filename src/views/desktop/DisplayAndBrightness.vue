@@ -18,7 +18,7 @@ export default {
   name: "DisplayAndBrightness",
   data() {
     return {
-      name: "显示和设置",
+      name: this.$t(this.$store.state.language,"显示和亮度"),
     };
   },
   components: {
