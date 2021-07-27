@@ -18,7 +18,7 @@ export default new Vuex.Store({
         remember: false
       }
     ],
-    language: 'English'
+    language: 'english'
   },
   mutations: {
     increasstate: function(user) {
@@ -26,6 +26,9 @@ export default new Vuex.Store({
         user.id = this.usermessage.length
         this.usermessage.push(user)
       }
+    },
+    chagelanguange: function(state,data) {
+      state.language = data
     }
   },
   actions: {

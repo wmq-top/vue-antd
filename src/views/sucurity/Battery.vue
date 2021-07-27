@@ -105,13 +105,13 @@ export default {
   created() {
     axios({
       method: "GET",
-      url: "http://localhost:3000/battery"
+      url: "http://192.168.3.56:3000/battery"
     }).then(res => {
       this.batteryrest = res.data[0].rest;
     });
     axios({
       method: "GET",
-      url: "http://localhost:3000/batterymode"
+      url: "http://192.168.3.56:3000/batterymode"
     }).then(res => {
       this.RPC = Object.assign({}, res.data);
       this.natureEnable = res.data[0].enable;
@@ -120,7 +120,7 @@ export default {
     });
     axios({
       method: "GET",
-      url: "http://localhost:3000/elerestshowmethod/1"
+      url: "http://192.168.3.56:3000/elerestshowmethod/1"
     }).then(res => {
       this.electricityshowmethodoptionindex = res.data.mode;
 
@@ -158,22 +158,22 @@ export default {
     sendmessagetoparent() {
       axios({
         method: "PUT",
-        url: "http://localhost:3000/batteryMode/1",
+        url: "http://192.168.3.56:3000/batteryMode/1",
         data: this.RPC[0]
       });
       axios({
         method: "PUT",
-        url: "http://localhost:3000/batteryMode/2",
+        url: "http://192.168.3.56:3000/batteryMode/2",
         data: this.RPC[1]
       });
       axios({
         method: "PUT",
-        url: "http://localhost:3000/batteryMode/3",
+        url: "http://192.168.3.56:3000/batteryMode/3",
         data: this.RPC[2]
       });
       axios({
         method: "PUT",
-        url: "http://localhost:3000/elerestshowmethod/1",
+        url: "http://192.168.3.56:3000/elerestshowmethod/1",
         data: {
           mode: this.electricityshowmethodoptionindex
         }

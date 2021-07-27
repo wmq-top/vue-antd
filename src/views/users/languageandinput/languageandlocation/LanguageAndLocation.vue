@@ -45,6 +45,19 @@ export default {
       langcheck: true
     };
   },
+  created() {
+    axios({
+      method: "GET",
+      url: "http://192.168.3.56:3000/basicmes/1",
+    })
+    .then((res) => {
+      if(res.data.language == "chinese") {
+        this.langcheck = true
+      } else if(res.data.language == "english") {
+        this.langcheck = false
+      }      
+    })
+  },
   components: {
     Topbar,
     Subbar
@@ -55,10 +68,28 @@ export default {
     },
     changelangCN() {
       this.langcheck = true
+      this.$store.commit("chagelanguange","chinese")
+      console.log(this.$store.state.language)
+      axios({
+        method: "PUT",
+        url: "http://192.168.3.56:3000/basicmes/1",
+        data:{
+          language: "chinese"
+        }
+      })
     },
     changelangEN() {
       this.langcheck = false
-      
+      this.$store.commit("chagelanguange","english")
+      console.log(this.$store.state.language)
+      axios({
+        method: "PUT",
+        url: "http://192.168.3.56:3000/basicmes/1",
+        data:{
+          language: "english"
+        }
+
+      })
     }
   }
 };

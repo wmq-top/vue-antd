@@ -1,5 +1,5 @@
 const $t = function (type, inputstring) {
-    if (type === "English") {
+    if (type === "english") {
         switch (inputstring) {
             case "蓝牙":
                 return "bluetooth"
@@ -47,7 +47,7 @@ const $t = function (type, inputstring) {
                 break;
         }
     }
-    if (type === "simplechinese") {
+    if (type === "chinese") {
         return inputstring
     }
 }
