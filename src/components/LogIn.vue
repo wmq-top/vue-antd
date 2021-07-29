@@ -105,7 +105,7 @@ export default {
         };
       },
       onValuesChange: (_, values) => {
-        //console.log(values);
+        
       }
     });
   },
@@ -118,7 +118,7 @@ export default {
           for (let i = 0; i < this.$store.state.usermessage.length; i++) {
             if(this.$store.state.usermessage[i].username == values.userName && this.$store.state.usermessage[i].password == values.password) {
               console.log('登录校验成功')       
-              this.$router.push('/Home')  
+              this.$router.push('/Desktop')  
               this.loginshow = false   
               return 
             } 

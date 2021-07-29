@@ -16,14 +16,19 @@ const routes = [
     component: LogIn
   },
   {
-    path: '/Home',
-    name: 'Home',
-    component: () => import('../views/Home.vue'),
+    path: '/Desktop',
+    name: 'Desktop',
+    component: () => import('../desktop/Desktop.vue')
+  },  
+  {
+    path: '/Setting',
+    name: 'Setting',
+    component: () => import('../setting/Home.vue'),
     children: [
       {
         path: 'Wlan',
         name: 'wlan',
-        component: () => import('../views/network/Wlan.vue')
+        component: () => import('../setting/network/Wlan.vue')
 
       }
     ]
