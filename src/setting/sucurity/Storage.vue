@@ -37,7 +37,7 @@ export default {
   created() {
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/storage"
+      url: "http://192.168.3.153:3000/storage"
     })
       .then(res => {
         this.typestep = [...res.data];

@@ -21,6 +21,16 @@ const routes = [
     component: () => import('../desktop/Desktop.vue')
   },  
   {
+    path: '/Caculate',
+    name: 'caculate',
+    component: () => import('../tools/Caculate.vue')
+  },
+  {
+    path: '/Leetcode',
+    name: 'leetcode',
+    component: () => import('../desktop/leetcode/Leetcode.vue')
+  },
+  {
     path: '/Setting',
     name: 'Setting',
     component: () => import('../setting/Home.vue'),

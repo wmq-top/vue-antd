@@ -110,7 +110,7 @@ export default {
   beforeDestroy() {
     axios({
       method: "PUT",
-      url: "http://192.168.3.56:3000/voice/1",
+      url: "http://192.168.3.153:3000/voice/1",
       data: {
         ring: this.ring,
         shake: this.shake,
@@ -125,7 +125,7 @@ export default {
   mounted() {
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/voice/1"
+      url: "http://192.168.3.153:3000/voice/1"
     }).then((res) => {
       this.ring = res.data.ring
       this.shake = res.data.shake

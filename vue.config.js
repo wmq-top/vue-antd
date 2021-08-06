@@ -3,7 +3,7 @@ module.exports = {
 
     },
     devServer: {
-        public: '192.168.3.56:8080',
+        public: '192.168.3.153:8080',
         disableHostCheck:true,
     }
 }

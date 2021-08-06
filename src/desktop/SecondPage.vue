@@ -1,7 +1,7 @@
 <template>
   <div id="secondpage">
     <ul>
-      <li v-for="(item,index) in Applist" :key="index" class="iconcontent">
+      <li v-for="(item,index) in Applist" :key="index" class="iconcontent" @click="toAPP(index)">
         <DesktopIconSmall></DesktopIconSmall>
         {{item}}
       </li>
@@ -20,6 +20,15 @@ export default {
   },
   components: {
     DesktopIconSmall
+  },
+  methods: {
+    toAPP(index) {
+      if(index == 0) {
+        this.$router.push('/Caculate')
+      } else if(index ==1) {
+        this.$router.push('/Leetcode')
+      }
+    }
   }
 };
 </script>

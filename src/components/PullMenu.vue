@@ -70,7 +70,7 @@ export default {
   created() {
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/wlan/1",
+      url: "http://192.168.3.153:3000/wlan/1",
     }).then((res) => {
       this.wifienable = res.data.Enable;
       this.wifiList = res.data.wlanlist;
@@ -78,7 +78,7 @@ export default {
 
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/pulllist",
+      url: "http://192.168.3.153:3000/pulllist",
     }).then((res) => {
       this.iconlist = res.data;
     });
@@ -125,7 +125,7 @@ export default {
   beforeDestroy() {
     axios({
       method: "PUT",
-      url: "http://192.168.3.56:3000/wlan/1",
+      url: "http://192.168.3.153:3000/wlan/1",
       data: {
         Enable: this.wifienable,
         wlanlist: this.wifiList,
@@ -135,7 +135,7 @@ export default {
     this.changelist.forEach((item, key) => {
       axios({
         method: "PUT",
-        url: "http://192.168.3.56:3000/pulllist/" + key,
+        url: "http://192.168.3.153:3000/pulllist/" + key,
         data: {
           id: key,
           name: that.iconlist[key - 1].name,

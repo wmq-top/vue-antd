@@ -48,7 +48,7 @@ export default {
   created() {
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/basicmes/1",
+      url: "http://192.168.3.153:3000/basicmes/1",
     })
     .then((res) => {
       if(res.data.language == "chinese") {
@@ -72,7 +72,7 @@ export default {
       console.log(this.$store.state.language)
       axios({
         method: "PUT",
-        url: "http://192.168.3.56:3000/basicmes/1",
+        url: "http://192.168.3.153:3000/basicmes/1",
         data:{
           language: "chinese"
         }
@@ -84,7 +84,7 @@ export default {
       console.log(this.$store.state.language)
       axios({
         method: "PUT",
-        url: "http://192.168.3.56:3000/basicmes/1",
+        url: "http://192.168.3.153:3000/basicmes/1",
         data:{
           language: "english"
         }

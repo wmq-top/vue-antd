@@ -60,13 +60,13 @@ export default {
   created() {
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/wlan/1"
+      url: "http://192.168.3.153:3000/wlan/1"
     }).then(res => {
       this.WlANEnable = res.data.Enable;
     });
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/wlan/2"
+      url: "http://192.168.3.153:3000/wlan/2"
     }).then(res => {
       console.log(res.data.wlanlist);
       this.WlanList = res.data.wlanlist;
@@ -86,7 +86,7 @@ export default {
   beforeDestroy() {
     axios({
       method: "PUT",
-      url: "http://192.168.3.56:3000/wlan/1",
+      url: "http://192.168.3.153:3000/wlan/1",
       data: {
         Enable: this.WlANEnable,
         wlanlist: this.WlanList

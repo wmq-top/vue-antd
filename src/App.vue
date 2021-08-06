@@ -20,7 +20,7 @@ export default {
   created() {
     axios({
       method: "GET",
-      url: "http://192.168.3.56:3000/basicmes",
+      url: "http://192.168.3.153:3000/basicmes",
     })
     .then((res) => {
       this.$store.commit("chagelanguange",res.data[0].language)      
